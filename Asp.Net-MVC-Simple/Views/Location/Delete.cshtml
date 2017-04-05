@@ -1,0 +1,18 @@
+﻿@model Asp.Net_MVC_Simple.Models.LocationViewModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Delete Location</h2>
+<hr />
+@using (Html.BeginForm("Delete", "Location"))
+{
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.LabelForModel(Model.Title)
+    <input type="submit" value="Delete" />
+}
+<hr />
+@Html.ActionLink("Back to List", "Index")
+

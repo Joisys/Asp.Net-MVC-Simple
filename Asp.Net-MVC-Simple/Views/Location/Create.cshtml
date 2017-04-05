@@ -1,0 +1,17 @@
+﻿@model Asp.Net_MVC_Simple.Models.LocationViewModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Create Location</h2>
+<hr/>
+@using (Html.BeginForm("Create", "Location"))
+{
+    <fieldset>
+        @Html.TextBoxFor(model => model.Title)
+        <input type="submit" value="Add" />
+    </fieldset>
+}
+<hr />
+@Html.ActionLink("Back to List", "Index")

@@ -1,0 +1,12 @@
+﻿@model Asp.Net_MVC_Simple.Models.LocationViewModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Location Details</h2>
+<hr/>
+<div>@Model.Id</div>
+<div>@Model.Title</div>
+<hr/>
+@Html.ActionLink("Back to List", "Index")

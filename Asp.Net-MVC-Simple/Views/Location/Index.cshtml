@@ -1,0 +1,19 @@
+﻿@model List<Asp.Net_MVC_Simple.Models.LocationViewModel>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h1>List of Locations</h1>
+<hr/>
+@Html.ActionLink("Create", "Create")
+<ul>
+    @foreach (var location in Model)
+    {
+        <li>@location.Title
+            <span>@Html.ActionLink("Edit", "Edit", new {location.Id})</span>|
+            <span>@Html.ActionLink("Delete", "Delete", new {location.Id})</span>
+        </li>
+    }
+</ul>
+
